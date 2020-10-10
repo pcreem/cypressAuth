@@ -20,4 +20,4 @@ cache:
 install:
   - yarn install --frozen-lockfile
 script:
-  - $(yarn bin)/cypress run --config video=false
+  - $(start-server-and-test bin)/'next dev' 3000 'cypress run --config video=false'
