@@ -5,7 +5,8 @@
   "scripts": {
     "dev": "next dev",
     "build": "next build",
-    "start": "next dev"
+    "start": "next dev",
+    "test":"start-server-and-test 'next dev' 3000 'cypress run --config video=false'"
   },
 
   "dependencies": {

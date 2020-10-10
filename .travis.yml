@@ -6,14 +6,18 @@ addons:
     packages:
       # Ubuntu 16+ does not install this dependency by default, so we need to install it ourselves
       - libgconf-2-4
+before_install: # if "install" is overridden
+  # Repo for Yarn
+  - sudo apt-key adv --fetch-keys http://dl.yarnpkg.com/debian/pubkey.gpg
+  - echo "deb http://dl.yarnpkg.com/debian/ stable main" | sudo tee /etc/apt/sources.list.d/yarn.list
+  - sudo apt-get update -qq
+  - sudo apt-get install -y -qq yarn
 cache:
-  # Caches $HOME/.npm when npm ci is default script command
-  # Caches node_modules in all other cases
-  npm: true
+  yarn: true
   directories:
     # we also need to cache folder with Cypress binary
     - ~/.cache
 install:
-  - npm ci
+  - yarn ci
 script:
-  - $(npm bin)/cypress run --config video=false
+  - $(yarn bin)/cypress run --config video=false
