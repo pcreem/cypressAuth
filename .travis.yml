@@ -1,6 +1,6 @@
 language: node_js
 node_js:
-  - 10
+  - 12
 addons:
   apt:
     packages:
@@ -18,6 +18,6 @@ cache:
     # we also need to cache folder with Cypress binary
     - ~/.cache
 install:
-  - yarn add
+  - yarn install --frozen-lockfile
 script:
   - $(yarn bin)/cypress run --config video=false
