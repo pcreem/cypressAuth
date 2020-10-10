@@ -19,7 +19,7 @@ describe('Login Test', () => {
 
     it('should send an email containing a verification link', () => {
         const inboxUrl = Cypress.env('inboxUrl')
-        const token  = Cypress.env('Api-Token')
+        const token  = Cypress.env('api_token')
 
         cy.getLastEmail().then(html => {
      
@@ -33,7 +33,7 @@ describe('Login Test', () => {
             method: 'PATCH',
             url: `${inboxUrl}/clean`,
             headers: {
-                'Api-Token': token,
+                'api_token': token,
                 }
             });
         });

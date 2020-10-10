@@ -1,5 +1,5 @@
 const inboxUrl = Cypress.env('inboxUrl')
-const token  = Cypress.env('Api-Token')
+const token  = Cypress.env('api_token')
 
 Cypress.Commands.add('getLastEmail', () => {
     function requestEmail() {
@@ -8,7 +8,7 @@ Cypress.Commands.add('getLastEmail', () => {
           method: 'GET',
           url: `${inboxUrl}/messages`,
           headers: {
-            'Api-Token': token,
+            'api_token': token,
           },
           json: true,
         })
@@ -21,7 +21,7 @@ Cypress.Commands.add('getLastEmail', () => {
             method: 'GET',
             url: `${inboxUrl}/messages/${msgId}/body.html`,
             headers: {
-                'Api-Token': token,
+                'api_token': token,
             },
             json: true,
             }).then(({ body }) => { 

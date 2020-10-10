@@ -1,4 +1,4 @@
 {
     "inboxUrl":"Your Mailtrap Inbox url with inboxId",
-    "Api-Token":"Your Mailtrap API token"
+    "api_token":"Your Mailtrap API token"
 }
