@@ -21,4 +21,4 @@ jobs:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
             - ~/.cache  ## cache both yarn and Cypress!
-      - run: $(yarn bin)/cypress run --config video=false
+      - run: $(yarn bin)/start-server-and-test 'next dev' 3000 'cypress run --config video=false
