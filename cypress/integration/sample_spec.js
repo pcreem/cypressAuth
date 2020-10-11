@@ -5,15 +5,18 @@ describe('Login Test', () => {
 
     it('Visits the test page', () => {
       cy.visit('http://localhost:3000')
-      cy.contains('Sign in').click()
-      cy.url().should('include', '/api/auth/signin')
+      .then(()=>{
+        cy.contains('Sign in').click()
+        cy.url().should('include', '/api/auth/signin')
 
-      cy.get('#input-email-for-email-provider')
-        .type(randomEmail)
-        .should('have.value', randomEmail)
+        cy.get('#input-email-for-email-provider')
+          .type(randomEmail)
+          .should('have.value', randomEmail)
     
         cy.contains('Sign in with Email').click()
         cy.contains('Check your email')
+      })
+      
         
     });
 

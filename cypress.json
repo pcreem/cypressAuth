@@ -1,4 +1,3 @@
 {
-    "inboxUrl":"Your Mailtrap Inbox url with inboxId",
-    "api_token":"Your Mailtrap API token"
-}
+    "retries": 3
+  }
