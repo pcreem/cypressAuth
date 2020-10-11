@@ -22,7 +22,7 @@ jobs:
           paths:
             - ~/.cache  ## cache both yarn and Cypress!
       - run: 
-          command: yarn next dev "&" wait-on "http://localhost:3000"
+          command: $(yarn bin)/next dev "&" wait-on "http://localhost:3000"
       - save_cache:
           key: v1-deps-{{ .Branch }}-{{ checksum "package.json" }}
           paths:
