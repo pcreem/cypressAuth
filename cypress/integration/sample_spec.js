@@ -4,7 +4,7 @@ const randomEmail = faker.internet.email().toLowerCase();
 describe('Login Test', () => {
 
     it('Visits the test page', () => {
-      cy.visit('http://localhost:3000')
+      cy.visit('/')
       cy.contains('Sign in').click()
       cy.url().should('include', '/api/auth/signin')
 
