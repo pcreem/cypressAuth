@@ -1,8 +1,8 @@
-# Cypress Email Testing
+# Cypress Email Authentication
 
 Blog post: https://dev.to/pcreem/cypress-next-auth-mail-authentication-57f0
 
-Code sample demonstrating how to test an email based workflow with Cypress.
+Code sample demonstrating how to test an email authentication workflow with Cypress.
 Mails are sent to Mailtrap and exposed through its API.
 
 ##  Setting up
