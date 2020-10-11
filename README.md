@@ -1,4 +1,11 @@
-#### Setting up
+# Cypress Email Testing
+
+Blog post: https://dev.to/pcreem/cypress-next-auth-mail-authentication-57f0
+
+Code sample demonstrating how to test an email based workflow with Cypress.
+Mails are sent to Mailtrap and exposed through its API.
+
+##  Setting up
 * `npx yarn`
 
 * signup an [Mailtrap](https://mailtrap.io/) account and get SMTP server in demo inbox
@@ -20,16 +27,16 @@ NEXTAUTH_URL=
     "Api-Token":"Your Mailtrap API token"
 }
 ```
+
+## Running the tests
+
 * `npx cypress open`
 *  run sample_spec.js test
 
 the result should like this
 ![cypress open](https://dev-to-uploads.s3.amazonaws.com/i/11y8jjbwgwhs8kcnj5yv.png)
 
-or to CI locally
-* `npx yarn add start-server-and-test`
-* `npx start-server-and-test 'next dev' 3000 'cypress run'`
-![cypress run](https://dev-to-uploads.s3.amazonaws.com/i/es2y7570m8qbfxt7mteg.png)
+
 
 
 
