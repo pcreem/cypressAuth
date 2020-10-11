@@ -1,7 +1,7 @@
 version: 2
 jobs:
   build:
-    windows:
+    docker:
       - image: cypress/base:10
         environment:
           ## this enables colors in the output
