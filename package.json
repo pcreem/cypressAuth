@@ -18,6 +18,7 @@
     "react-dom": "16.13.1",
     "sqlite3": "^5.0.0",
     "start-server-and-test": "^1.11.5",
-    "synp": "^1.9.4"
+    "synp": "^1.9.4",
+    "wait-on": "^5.2.0"
   }
 }

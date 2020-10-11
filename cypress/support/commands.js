@@ -8,7 +8,7 @@ Cypress.Commands.add('getLastEmail', () => {
           method: 'GET',
           url: `${inboxUrl}/messages`,
           headers: {
-            'api_token': token,
+            'Api-Token': token,
           },
           json: true,
         })
@@ -21,7 +21,7 @@ Cypress.Commands.add('getLastEmail', () => {
             method: 'GET',
             url: `${inboxUrl}/messages/${msgId}/body.html`,
             headers: {
-                'api_token': token,
+                'Api-Token': token,
             },
             json: true,
             }).then(({ body }) => { 

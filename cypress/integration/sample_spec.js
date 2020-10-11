@@ -33,7 +33,7 @@ describe('Login Test', () => {
             method: 'PATCH',
             url: `${inboxUrl}/clean`,
             headers: {
-                'api_token': token,
+                'Api-Token': token,
                 }
             });
         });
